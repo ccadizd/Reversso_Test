@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Reversso</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+    <div class="alert success">
+        <span class="closebtn">&times;</span>
+         Has ingresado con tu cuenta correctamente.
+    </div>
+    <section class="seccion1">
+      <div class="div1"><img class="foto1" src="imagenes/foto.png"></div>
+      <div class="div2"><img class="foto2" src="imagenes/foto2.png"></div>
+    </section>
+    <section class="seccion2">
+        <form class="formulario" action="index.html">
+          <button type="submit" class="button buttonBlue">Cerrar Sesion</button>
+        </form>
+    </section>
+    <script>
+        var close = document.getElementsByClassName("closebtn");
+        var i;
+
+        for (i = 0; i < close.length; i++) {
+        close[i].onclick = function(){
+            var div = this.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function(){ div.style.display = "none"; }, 600);
+        }
+        }
+    </script>
+	</body>
+</html>
